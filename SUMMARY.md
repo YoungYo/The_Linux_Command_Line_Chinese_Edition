@@ -5,5 +5,5 @@
 
 ## 第一部分 了解 Shell
 
-* [第 1 章 什么是 Shell？](di-yi-bu-fen-le-jie-shell/untitled.md)
+* [第 1 章 什么是 Shell？](part1_learning_the_shell/chapter1_what_is_the_shell.md)
 
