@@ -82,7 +82,7 @@
 
 * 关于自由软件基金以及 GNU 项目：
 
-  [http://en.wikipedia.org/wiki/Free\_Software\_Foundation](http://en.wikipedia.org/wiki/Free_Software_Foundation)   
+  [http://en.wikipedia.org/wiki/Free\_Software\_Foundation](http://en.wikipedia.org/wiki/Free_Software_Foundation)
 
   [http://www.fsf.org](http://www.fsf.org)
 
