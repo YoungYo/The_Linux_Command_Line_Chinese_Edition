@@ -1,7 +1,7 @@
 # Table of contents
 
 * [译者序](README.md)
-* [概述](Introduction.md)
+* [概述](introduction.md)
 
 ## 第一部分 了解 Shell
 
