@@ -7,4 +7,5 @@
 
 * [第 1 章 什么是 Shell？](di-yi-bu-fen-le-jie-shell/chapter1_what_is_the_shell.md)
 * [第 2 章 导航](di-yi-bu-fen-le-jie-shell/chapter2_navigation.md)
+* [第 3 章 探索 Linux 系统](di-yi-bu-fen-le-jie-shell/chapter3_exploring_the_system.md)
 
