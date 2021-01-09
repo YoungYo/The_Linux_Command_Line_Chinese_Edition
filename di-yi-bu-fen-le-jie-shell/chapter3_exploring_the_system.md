@@ -208,13 +208,143 @@ Linux 系统上的文件系统布局与其他类 Unix 系统非常相似。该�
 
 _表 3-4：Linux 操作系统中的目录_
 
-| 目录 | 说明 |
-| :--- | :--- |
-| `/` | 根目录。一切都开始于此 |
-| `/bin` | 包含系统启动和运行时必须存在的二进制文件（程序） |
-| `/boot` | 包含 Linux 内核、初始 RAM 磁盘映像（引导时所需的驱动程序）和引导加载程序。其中有一些有趣的文件：`/boot/grub/grub.conf`或者`menu.lst`，用于配置引导加载程序；`/boot/vmlinuz`（或者与此类似的文件），Linux 内核。 |
-|  |  |
-|  |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x76EE;&#x5F55;</th>
+      <th style="text-align:left">&#x8BF4;&#x660E;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>/</code>
+      </td>
+      <td style="text-align:left">&#x6839;&#x76EE;&#x5F55;&#x3002;&#x4E00;&#x5207;&#x90FD;&#x5F00;&#x59CB;&#x4E8E;&#x6B64;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/bin</code>
+      </td>
+      <td style="text-align:left">&#x5305;&#x542B;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x548C;&#x8FD0;&#x884C;&#x65F6;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF08;&#x7A0B;&#x5E8F;&#xFF09;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/boot</code>
+      </td>
+      <td style="text-align:left">&#x5305;&#x542B; Linux &#x5185;&#x6838;&#x3001;&#x521D;&#x59CB; RAM &#x78C1;&#x76D8;&#x6620;&#x50CF;&#xFF08;&#x5F15;&#x5BFC;&#x65F6;&#x6240;&#x9700;&#x7684;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#xFF09;&#x548C;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x3002;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x4E9B;&#x6709;&#x8DA3;&#x7684;&#x6587;&#x4EF6;&#xFF1A;<code>/boot/grub/grub.conf</code>&#x6216;&#x8005;<code>menu.lst</code>&#xFF0C;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#xFF1B;<code>/boot/vmlinuz</code>&#xFF08;&#x6216;&#x8005;&#x4E0E;&#x6B64;&#x7C7B;&#x4F3C;&#x7684;&#x6587;&#x4EF6;&#xFF09;&#xFF0C;Linux
+        &#x5185;&#x6838;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/dev</code>
+      </td>
+      <td style="text-align:left">&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;<em>&#x8BBE;&#x5907;&#x8282;&#x70B9;</em>&#x7684;&#x7279;&#x6B8A;&#x76EE;&#x5F55;&#xFF0C;&#x300C;&#x4E00;&#x5207;&#x7686;&#x6587;&#x4EF6;&#x300D;&#x7684;&#x601D;&#x60F3;&#x540C;&#x6837;&#x9002;&#x7528;&#x4E8E;&#x8BBE;&#x5907;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x5185;&#x6838;&#x7EF4;&#x62A4;&#x5B83;&#x652F;&#x6301;&#x7684;&#x6240;&#x6709;&#x8BBE;&#x5907;&#x5217;&#x8868;&#x7684;&#x5730;&#x65B9;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/etc</code>
+      </td>
+      <td style="text-align:left">
+        <p>&#x5305;&#x542B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C; shell &#x811A;&#x672C;&#xFF0C;&#x6240;&#x6709;&#x80FD;&#x591F;&#x5F71;&#x54CD;&#x7CFB;&#x7EDF;&#x5168;&#x5C40;&#x8303;&#x56F4;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5747;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x4F1A;&#x6267;&#x884C;<code>/etc</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x4EE5;&#x542F;&#x52A8;&#x4E00;&#x4E9B;&#x670D;&#x52A1;&#x3002;<code>/etc</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x662F;&#x53EF;&#x8BFB;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x3002;</p>
+        <p><code>/etc</code>&#x76EE;&#x5F55;&#x4E0B;&#x51E0;&#x4E2A;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x6587;&#x4EF6;&#xFF08;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x8FD9;&#x91CC;&#x8BF4;&#x51E0;&#x4E2A;&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#xFF09;&#xFF1A;</p>
+        <ol>
+          <li><code>/etc/crontab</code>&#xFF0C;&#x914D;&#x7F6E;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x6709;&#x4E2A;&#x547D;&#x4EE4;<code>crontab -e</code>&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x6700;&#x7EC8;&#x4E5F;&#x662F;&#x4FEE;&#x6539;&#x4E86;&#x6587;&#x4EF6;<code>/etc/crontab</code>&#x3002;&#x800C;&#x547D;&#x4EE4;<code>crontab -l</code>&#x662F;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x5DF2;&#x6709;&#x7684;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x663E;&#x793A;&#x7684; <code>/etc/crontab</code>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;</li>
+          <li><code>/etc/fstab</code>&#xFF0C;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7684;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x4ED6;&#x4EEC;&#x7684;&#x6302;&#x8F7D;&#x70B9;&#x3002;</li>
+          <li><code>/etc/passwd</code>&#xFF0C;&#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x3002;</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/home</code>
+      </td>
+      <td style="text-align:left">&#x5728;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5728;/home&#x76EE;&#x5F55;&#x4E2D;&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x5BB6;&#x76EE;&#x5F55;&#xFF0C;&#x666E;&#x901A;&#x7528;&#x6237;&#x53EA;&#x80FD;&#x5728;&#x4ED6;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#x4E2D;&#x5199;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x79CD;&#x9650;&#x5236;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x62A4;&#x7CFB;&#x7EDF;&#x4E0D;&#x88AB;&#x7528;&#x6237;&#x9519;&#x8BEF;&#x7684;&#x884C;&#x4E3A;&#x7834;&#x574F;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/lib</code>
+      </td>
+      <td style="text-align:left">&#x5305;&#x542B;&#x6838;&#x5FC3;&#x7CFB;&#x7EDF;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x7684;&#x5171;&#x4EAB;&#x5E93;&#x6587;&#x4EF6;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;
+        Windows &#x4E2D;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#xFF08;DLL&#xFF09;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/lost+found</code>
+      </td>
+      <td style="text-align:left">&#x6BCF;&#x4E00;&#x4E2A;&#x4F7F;&#x7528; Linux &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF08;&#x6BD4;&#x5982;
+        ext4&#xFF09;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x5206;&#x533A;&#x6216;&#x8BBE;&#x5907;&#x90FD;&#x6709;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5F53;&#x5206;&#x533A;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x65AD;&#x4E8B;&#x4EF6;&#x4E2D;&#x6062;&#x590D;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5C31;&#x4F1A;&#x6D3E;&#x4E0A;&#x7528;&#x573A;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/media</code>
+      </td>
+      <td style="text-align:left">&#x5728;&#x73B0;&#x4EE3; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;<code>/media</code>&#x76EE;&#x5F55;&#x4E3A;&#x53EF;&#x79FB;&#x52A8;&#x5A92;&#x4F53;&#xFF08;&#x6BD4;&#x5982;
+        USB &#x9A71;&#x52A8;&#x5668;&#x3001;CD-ROM &#x7B49;&#xFF09;&#x63D0;&#x4F9B;&#x6302;&#x8F7D;&#x70B9;&#xFF0C;&#x8FD9;&#x4E9B;&#x53EF;&#x79FB;&#x52A8;&#x5A92;&#x4F53;&#x5728;&#x63D2;&#x5165;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x6302;&#x8F7D;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/mnt</code>
+      </td>
+      <td style="text-align:left">&#x5728;&#x8001;&#x7684; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#xFF0C;&#x53EF;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x5FC5;&#x987B;&#x624B;&#x52A8;&#x6302;&#x8F7D;&#xFF0C;<code>/mnt</code>&#x4E3A;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x6302;&#x8F7D;&#x70B9;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/opt</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/proc</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/root</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/sbin</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/tmp</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/usr</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/usr/bin</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/usr/local</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/usr/sbin</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/usr/share</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/usr/share/doc</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/var</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>/var/log</code>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
