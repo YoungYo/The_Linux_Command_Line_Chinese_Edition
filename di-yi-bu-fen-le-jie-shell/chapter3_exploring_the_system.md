@@ -70,70 +70,23 @@ command -options arguments
 
 > **注意：**与文件名一样，Linux 中的命令选项也是大小写敏感的。
 
-`ls`命令支持很多选项，表 3-1 中列出了最常用的几个。
+`ls`命令支持很多选项，表 3-1 列出了最常用的几个。
 
-   <table> 
-    <thead> 
-     <tr>
-      <th style="text-align:left; width:10%">选项</th>
-      <th style="text-align:left; width:20%">长选项</th>
-      <th style="text-align:left;">功能描述</th>
-     </tr>
-    </thead> 
-    <tbody>
-     <tr>
-      <td style="text-align:left;">-a</td>
-      <td style="text-align:left;">--all</td>
-      <td style="text-align:left;">列出所有的文件，包括那些文件名以「.」开头的隐藏文件。</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-A</td>
-      <td style="text-align:left;">--almost-all</td>
-      <td style="text-align:left;">作用与上面的<code>-a</code>选项类似，但是不会列出「.」（当前目录）和「..」（上一层目录）</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-d</td>
-      <td style="text-align:left;">--directory</td>
-      <td style="text-align:left;">正常情况下，如果给<code>ls</code>命令指定一个目录，它会列出这个目录所包含的内容，而不是这个目录自身。将此选项与<code>-l</code>选项一起使用，可以查看有关目录而不是目录内容的详细信息。</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-F</td>
-      <td style="text-align:left;">--classify</td>
-      <td style="text-align:left;">这个选项会在列出的每一个文件名后面添加一个指示符，例如，如果是一个目录，则会在目录名后面添加一个正斜杠（/）。</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-h</td>
-      <td style="text-align:left;">--human-readable</td>
-      <td style="text-align:left;">在长格式的列表中，将文件大小以人类容易识别的方式展示出来，而不是展示字节数。</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-l</td>
-      <td style="text-align:left;">&nbsp;</td>
-      <td style="text-align:left;">以长格式的方式展示结果</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-r</td>
-      <td style="text-align:left;">--reverse</td>
-      <td style="text-align:left;">以倒序排列的方式展示结果。正常情况下，<code>ls</code>按照字母排列顺序展示结果。</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-S</td>
-      <td style="text-align:left;">&nbsp;</td>
-      <td style="text-align:left;">将文件按照大小进行排序。</td>
-     </tr>
-     <tr>
-      <td style="text-align:left;">-t</td>
-      <td style="text-align:left;">&nbsp;</td>
-      <td style="text-align:left;">将文件按照修改时间进行排序。</td>
-     </tr>
-    </tbody> 
-   </table>
+| 选项 | 长选项 | 功能描述 |
+| :--- | :--- | :--- |
+| -a | --all | 列出所有的文件，包括那些文件名以「.」开头的隐藏文件。 |
+| -A | --almost-all | 作用与上面的`-a`选项类似，但是不会列出「.」（当前目录）和「..」（上一层目录） |
+| -d | --directory | 正常情况下，如果给`ls`命令指定一个目录，它会列出这个目录所包含的内容，而不是这个目录自身。将此选项与`-l`选项一起使用，可以查看有关目录而不是目录内容的详细信息。 |
+| -F | --classify | 这个选项会在列出的每一个文件名后面添加一个指示符，例如，如果是一个目录，则会在目录名后面添加一个正斜杠（/）。 |
+| -h | --human-readable | 在长格式的列表中，将文件大小以人类容易识别的方式展示出来，而不是展示字节数。 |
+| -l |  | 以长格式的方式展示结果 |
+| -r | --reverse | 以倒序排列的方式展示结果。正常情况下，`ls`按照字母排列顺序展示结果。 |
+| -S |  | 将文件按照大小进行排序。 |
+| -t |  | 将文件按照修改时间进行排序。 |
 
-<center><font face="楷体">表3-1 ls命令的选项</font></center>
+### 
 
 ### 深入理解长格式
-
-![image-20200725105449898](https://github.com/YoungYo/The_Linux_Command_Line_Chinese_Edition/tree/5eab85700a6f53cd470d25bb07c36869cf3bb650/di-yi-bu-fen-le-jie-shell/image-20200725105449898.png)
 
 正如我们在前面看到的，`-l`选项能够让`ls`命令以长格式的方式输出结果。这种格式包含很多有用的信息。下面展示的是 Ubuntu 系统的`Examples`目录：
 
@@ -151,19 +104,24 @@ command -options arguments
 -rw-r--r-- 1 root root 358374 2017-04-03 11:05 ubuntu Sax.ogg
 ```
 
-![image-20200725105831596](https://github.com/YoungYo/The_Linux_Command_Line_Chinese_Edition/tree/5eab85700a6f53cd470d25bb07c36869cf3bb650/di-yi-bu-fen-le-jie-shell/image-20200725105831596.png)
-
 表 3-2 为我们提供了其中一个文件的不同字段及其含义。
+
+
 
 | 字段 | 含义 |
 | :--- | :--- |
 |  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| -rw-r--r-- | 文件访问权限。第一个字符用于指示文件类型，短横表示这是一个普通文件， “d”表示这是一个目录。接下来的三个字符代表该文件的所有者对于该文件的 访问权限，再接下来的三个字符代表该文件的所属组成员对该文件的访问权限， 最后的三个字符代表除了前两种用户之外的所有用户（即其他用户）对该文件的访问权限。在第9章——“权限”中我们会详细讨论这一块的具体含义。 |
+| 1 | 该文件的硬链接的个数。本章后面的内容“硬链接”和“链接”介绍关于链接的内容。 |
+| root | 文件所有者的用户名。 |
+| root | 文件所属组的名字。 |
+| 32059 | 文件的大小，范围是字节。 |
+| 2007-04-03 11:05 | 文件最后一次被修改的日期和时间。 |
+| oo-cd-cover.odf | 文件名。 |
+
+## 用 `file` 命令确定文件类型
+
+在我们探索 Linux 系统的时候，知道一个文件包含什么内容至关重要。要想做到这一点，我们可以使用`file`命令来确定一个文件的类型。 正如我们之前讨论的，Linux 中不通过文件名来反映文件的内容。例如一个名为“picture.jpg”的文件，虽然我们一般会认为其中包含的应该是JPEG压缩图像， 但是在Linux中则不一定。我们可以通过下面这种方式调用`file`命令：
+
+
 
