@@ -16,7 +16,7 @@
 
 我们当中的许多人也许会对图 1 这种展示文件系统树的图形化的文件管理器比较熟悉。请注意，树通常显示为倒立，即根在顶部，而各个分支在下方。
 
-![image-20200720133915757](https://github.com/YoungYo/The_Linux_Command_Line_Chinese_Edition/tree/43d5b0621808c2b08a9c499a70f3c6afa130ab3a/part1_learning_the_shell/image-20200720133915757.png)
+![&#x56FE; 1&#xFF1A;&#x56FE;&#x5F62;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x5668;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6811;](../.gitbook/assets/image-20200720133915757.png)
 
 然而，命令行无法显示图片，所以我们需要考虑一种不同的方式在文件系统中进行导航。
 
